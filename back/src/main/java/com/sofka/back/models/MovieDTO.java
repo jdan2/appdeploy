@@ -1,5 +1,6 @@
 package com.sofka.back.models;
 
+import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import java.util.Objects;
 
@@ -10,7 +11,7 @@ public class MovieDTO {
     @NotBlank
     private String nombre;
     @NotBlank
-    private String Duracion;
+    private String duracion;
     @NotBlank
     private String link;
     @NotBlank
@@ -22,7 +23,7 @@ public class MovieDTO {
     public MovieDTO(String id, String nombre, String duracion, String link, String idTipo) {
         this.id = id;
         this.nombre = nombre;
-        Duracion = duracion;
+        this.duracion = duracion;
         this.link = link;
         this.idTipo = idTipo;
     }
@@ -44,11 +45,11 @@ public class MovieDTO {
     }
 
     public String getDuracion() {
-        return Duracion;
+        return duracion;
     }
 
     public void setDuracion(String duracion) {
-        Duracion = duracion;
+        this.duracion = duracion;
     }
 
     public String getLink() {
@@ -72,12 +73,12 @@ public class MovieDTO {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         MovieDTO movieDTO = (MovieDTO) o;
-        return Objects.equals(id, movieDTO.id) && Objects.equals(nombre, movieDTO.nombre) && Objects.equals(Duracion, movieDTO.Duracion) && Objects.equals(link, movieDTO.link) && Objects.equals(idTipo, movieDTO.idTipo);
+        return Objects.equals(id, movieDTO.id) && Objects.equals(nombre, movieDTO.nombre) && Objects.equals(duracion, movieDTO.duracion) && Objects.equals(link, movieDTO.link) && Objects.equals(idTipo, movieDTO.idTipo);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, nombre, Duracion, link, idTipo);
+        return Objects.hash(id, nombre, duracion, link, idTipo);
     }
 
     @Override
@@ -85,7 +86,7 @@ public class MovieDTO {
         return "MovieDTO{" +
                 "id='" + id + '\'' +
                 ", nombre='" + nombre + '\'' +
-                ", Duracion='" + Duracion + '\'' +
+                ", Duracion='" + duracion + '\'' +
                 ", link='" + link + '\'' +
                 ", idTipo='" + idTipo + '\'' +
                 '}';

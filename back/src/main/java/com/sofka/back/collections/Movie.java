@@ -8,7 +8,7 @@ public class Movie {
     @Id
     private String id;
     private String nombre;
-    private String Duracion;
+    private String duracion;
     private String link;
     private String idTipo;
 
@@ -29,11 +29,11 @@ public class Movie {
     }
 
     public String getDuracion() {
-        return Duracion;
+        return duracion;
     }
 
     public void setDuracion(String duracion) {
-        Duracion = duracion;
+        this.duracion = duracion;
     }
 
     public String getLink() {
